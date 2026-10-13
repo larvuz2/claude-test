@@ -12,8 +12,18 @@
       align-items: center;
       justify-content: center;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(-45deg, #ff9a9e, #ff6fb5, #fbc2eb, #f857a6);
+      background-size: 400% 400%;
+      animation: gradient 12s ease infinite;
       color: #fff;
+    }
+    @keyframes gradient {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      body { animation: none; }
     }
     h1 {
       font-size: clamp(2.5rem, 10vw, 6rem);
